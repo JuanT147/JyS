@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+  color: #333;
+  overflow-x: hidden;
+  padding-bottom: 60px;
+}
+
+/* Corazones Flotantes */
+.bg-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heart-bg {
+  position: absolute;
+  bottom: -10%;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.4);
+  animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+/* Estructura Principal */
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 25px;
+  padding: 30px;
+  margin-top: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Monograma de Iniciales */
+.initials-badge {
+  display: inline-block;
+  background: #ffffff;
+  color: #d63384;
+  padding: 6px 22px;
+  border-radius: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.2);
+  border: 2px dashed #ff758c;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.7rem;
+  color: #d63384;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: #d63384;
+  margin: 25px 0 15px 0;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Contador */
+.timer-box {
+  background: #fff0f3;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px 0;
+  font-weight: 600;
+  color: #c2255c;
+  font-size: 1.05rem;
+  border: 1px solid #ffdeeb;
+}
+
+/* Botón de Música Flotante */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: #ffffff;
+  border: 2px solid #ff758c;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Galería Polaroid */
+.polaroid-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 20px 10px;
+  border-radius: 4px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+  width: calc(33% - 10px);
+  min-width: 150px;
+  transition: transform 0.3s;
+}
+
+.polaroid:nth-child(1) { transform: rotate(-3deg); }
+.polaroid:nth-child(2) { transform: rotate(2deg); }
+.polaroid:nth-child(3) { transform: rotate(-2deg); }
+
+.polaroid:hover {
+  transform: scale(1.08) rotate(0deg);
+  z-index: 2;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.polaroid p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #555;
+}
+
+/* 6 Razones */
+.reasons {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.reason-item {
+  background: #fff0f3;
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  border-left: 4px solid #ff758c;
+}
+
+/* Quiz */
+.quiz-question {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #ff758c;
+  background: white;
+  border-radius: 15px;
+  color: #d63384;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quiz-option:hover {
+  background: #ff758c;
+  color: white;
+}
+
+.quiz-response {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  min-height: 25px;
+}
+
+/* Botón de Carta */
+.btn-main {
+  background: linear-gradient(45deg, #ff758c, #ff7eb3);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+  transition: transform 0.2s;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+}
+
+/* Carta Decorativa estilo Pergamino */
+.letter-paper {
+  display: none;
+  position: relative;
+  background: #fffdf7;
+  border: 2px solid #e2c08d;
+  border-radius: 15px;
+  padding: 35px 25px 25px 25px;
+  margin-top: 20px;
+  text-align: left;
+  box-shadow: inset 0 0 20px rgba(226, 192, 141, 0.2), 0 10px 20px rgba(0,0,0,0.08);
+  background-image: radial-gradient(#f3e5ab 0.5px, transparent 0.5px);
+  background-size: 10px 10px;
+}
+
+.wax-seal {
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background: #b80c09;
+  border-radius: 50%;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #8b0000;
+}
+
+.letter-body {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #4a3b32;
+}
+
+.letter-body p {
+  margin-bottom: 15px;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Tarjeta especial al final de las razones */
+.more-reasons-card {
+  background: #fff0f5;
+  border: 2px dashed #ff758c;
+  border-radius: 15px;
+  padding: 16px 20px;
+  margin-top: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 117, 140, 0.1);
+}
+
+.more-reasons-title {
+  font-weight: 600;
+  color: #d63384;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.more-reasons-text {
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.4;
+}

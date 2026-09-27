@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J y S — Nuestros 6 Meses ❤️</title>
+  
+  <!-- Fuentes externas -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Librería Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Música de fondo (Reemplaza con tu archivo mp3 o URL) -->
+  <audio id="bg-music" loop>
+    <source src="musica1.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" id="music-btn">🎵</button>
+
+  <!-- Contenedor para animación de corazones -->
+  <div class="bg-hearts" id="hearts-container"></div>
+
+  <div class="container">
+    <div class="card">
+      
+      <div class="initials-badge">J ❤️ S</div>
+
+      <h1>¡Feliz Medio Año Juntos!</h1>
+      <p class="subtitle">6 meses de complicidad, risas y mucho amor.</p>
+      
+      <div class="timer-box" id="timer">Calculando nuestro tiempo...</div>
+
+      <!-- Galería de 3 Fotos -->
+      <h2>Nuestros Recuerdos</h2>
+      <div class="polaroid-grid">
+        <div class="polaroid">
+          <img src="foto1.jpg" alt="Foto 1">
+          <p>Besito xd</p>
+        </div>
+        <div class="polaroid">
+          <img src="foto2.PNG" alt="Foto 2">
+          <p>❤️</p>
+        </div>
+        <div class="polaroid">
+          <img src="foto3.jpg" alt="Foto 3">
+          <p>Siempre Juntos</p>
+        </div>
+      </div>
+
+      <!-- 6 Razones -->
+      <h2>6 Razones por las que te amo</h2>
+      <div class="reasons">
+        <div class="reason-item">1. Por la forma en que me haces sonreír incluso en días difíciles.</div>
+        <div class="reason-item">2. Por ser como mi lugar seguro.</div>
+        <div class="reason-item">3. Por la paciencia y el cariño con el que me escuchas siempre.</div>
+        <div class="reason-item">4. Por los chistes que solo tú y yo entendemos.</div>
+        <div class="reason-item">5. Por ser mi compañera de aventuras.</div>
+        <div class="reason-item">6. Por simplemente ser tú.</div>
+      <!-- Nota especial al final -->
+        <div class="more-reasons-card">
+          <p class="more-reasons-title">¿Pensaste que solo eran 6 razones? 🤭💖</p>
+          <p class="more-reasons-text">
+            La verdad es que 6 se quedan muy cortas... ¡necesitaría una página infinita para escribir todas las cosas que me enamoran de ti cada día!
+          </p>
+        </div>
+      </div>
+
+      <!-- Juego Interactivo -->
+      <h2>Un pequeño juego...</h2>
+      <p class="quiz-question">¿Qué es lo que más me gusta de ti?</p>
+      
+      <button class="quiz-option" data-correct="false">Tu sonrisa y tus ojos 😍</button>
+      <button class="quiz-option" data-correct="false">Tu forma de ser conmigo 💖</button>
+      <button class="quiz-option" data-correct="true">Absolutamente TODO de ti ✨</button>
+      
+      <div id="quiz-response" class="quiz-response"></div>
+
+      <!-- Carta Decorada -->
+      <br><br>
+      <button class="btn-main" id="btn-letter">Abrir mi carta para ti 💌</button>
+      
+      <div id="letter" class="letter-paper">
+        <div class="wax-seal">J&S</div>
+        <div class="letter-body">
+          <p>Mi amor,</p>
+          <p>Parece que fue ayer cuando empezamos este camino juntos, y ya han pasado 6 meses hermosos llenos de momentos que guardo en mi corazón.</p>
+          <p>Gracias por cada risa, cada abrazo y por hacer que mi mundo sea mucho más bonito desde que estás en él.</p>
+          <p>Te amo muchísimo. ¡Feliz aniversario de 6 meses!</p>
+          <p class="signature">Con todo mi amor,<br><strong>Juan</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lógica JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
